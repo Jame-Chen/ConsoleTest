@@ -1,0 +1,14 @@
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\ConsoleTest.exe
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\ConsoleTest.pdb
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\EntityFramework.dll
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\EntityFramework.SqlServer.dll
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\System.Net.Http.Extensions.dll
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\System.Net.Http.Primitives.dll
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\EntityFramework.xml
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\EntityFramework.SqlServer.xml
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\System.Net.Http.Extensions.xml
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\bin\Debug\System.Net.Http.Primitives.xml
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\obj\Debug\ConsoleTest.csproj.App.config
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\obj\Debug\ConsoleTest.exe
+D:\我的文档\Visual Studio 2013\Projects\ConsoleTest\ConsoleTest\obj\Debug\ConsoleTest.pdb

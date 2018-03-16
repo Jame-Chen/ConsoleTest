@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="testModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Departure" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Destination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="testModel.TicketUser" FromRole="Ticket" ToRole="User" />
+    <Property Name="RowVersion" Type="Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" MaxLength="8" FixedLength="true" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ticket" EntityType="Self.Ticket" />
+    <EntitySet Name="User" EntityType="testModel.User" />
+    <AssociationSet Name="TicketUser" Association="testModel.TicketUser">
+      <End Role="Ticket" EntitySet="Ticket" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="UserName" Nullable="false" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="GetTime" Nullable="false" Type="DateTime" Precision="3" />
+    <Property Name="Count" Nullable="false" Type="Int32" />
+    <NavigationProperty Name="Ticket" Relationship="testModel.TicketUser" FromRole="User" ToRole="Ticket" />
+    <Property Name="TicketId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="TicketUser">
+    <End Type="testModel.Ticket" Role="Ticket" Multiplicity="1" />
+    <End Type="testModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ticket">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="TicketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
